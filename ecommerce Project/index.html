@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/style.css">
-    <title>Ecommerce application using API</title>
+    <title>Ecommerce Application using API</title>
 </head>
 
 <body>
@@ -20,12 +20,10 @@
                 <li><a href="#">Contact</a></li>
             </ul>
         </nav>
-        <div class="navbarButtons ">
-            <a href=""><img src="./assets/products/box-arrow-in-right.svg" alt="">login</a>
-
+        <div class="navbarButtons">
+            <a href=""><img src="./assets/products/box-arrow-in-right.svg" alt="">Login</a>
             <a href=""><img src="./assets/products/person-plus-fill.svg" alt="">Register</a>
-
-            <a href=""><img src="./assets/products/cart3.svg" alt="">Cart (0)</a>
+            <a href="#" id="cart-icon"><img src="./assets/products/cart3.svg" alt="">Cart (0)</a>
         </div>
     </header>
 
@@ -42,25 +40,23 @@
     <!-- latest-products -->
     <section class="latest-products">
         <h2>Latest Products</h2>
-        <hr> 
-      
-        <div class="filter-buttons">
-          <button class="filter-btn">All</button>
-          <button class="filter-btn">Men's Clothing</button>
-          <button class="filter-btn">Women's Clothing</button>
-          <button class="filter-btn">Jewelery</button>
-          <button class="filter-btn">Electronics</button>
-        </div>
-      
-        <div class="product-grid">
-          <div class="product-card">
-            <!--Product content   -->
-          </div>
-          <!-- More product cards -->
-        </div>
-      </section>
+        <hr>
 
-    <script src="script.js"></script>
+        <div class="filter-buttons">
+            <button class="filter-btn" data-category="all">All</button>
+            <button class="filter-btn" data-category="men's clothing">Men's Clothing</button>
+            <button class="filter-btn" data-category="women's clothing">Women's Clothing</button>
+            <button class="filter-btn" data-category="jewelery">Jewelery</button>
+            <button class="filter-btn" data-category="electronics">Electronics</button>
+        </div>
+
+        <div class="product-grid" id="product-grid"></div>
+    </section>
+
+    <script src="./assets/js/app.js"></script>
+
+    <!-- End credits - my name -->
+    <p class="myNameatBottom">Made with ❤️ by <span class="underlined">M A ABDUL KALAM</span></p>
 </body>
 
 </html>

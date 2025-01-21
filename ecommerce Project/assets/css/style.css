@@ -1,35 +1,32 @@
 body {
     margin: 0;
+    padding: 0;
     font-family: Arial, sans-serif;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
 }
 
 /* header */
 header {
     padding: 30px 0;
+    width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: #F8F9FA;
 }
 
-h1 {
+header h1 {
     font-size: 30px;
     margin: 0;
     color: #181819;
 }
 
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-
-nav ul li {
-    margin: 0 20px 0 20px;
-    font-size: 20px;
-}
-
-nav a.active {
+header nav a.active {
     color: #181819;
 }
 
@@ -39,12 +36,24 @@ a {
     transition: color 0.3s ease;
 }
 
-.navbarButtons {
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin: 0 20px 0 20px;
+    font-size: 20px;
+}
+
+header .navbarButtons {
     display: flex;
     justify-content: flex-end;
 }
 
-.navbarButtons a {
+header .navbarButtons a {
     display: inline-flex;
     align-items: center;
     padding: 8px 18px;
@@ -54,11 +63,11 @@ a {
     color: black;
 }
 
-.navbarButtons a img {
+header .navbarButtons a img {
     margin-right: 7px;
 }
 
-/* section - banner image  */
+/* Banner */
 .banner {
     position: relative;
     width: calc(100% - 40px);
@@ -67,13 +76,13 @@ a {
     border-radius: 10px;
 }
 
-.banner-image {
+section .banner-image {
     width: 100%;
     height: 500px;
     object-fit: cover;
 }
 
-.banner-content {
+section .banner-content {
     font-size: xx-large;
     position: absolute;
     top: 130px;
@@ -83,11 +92,7 @@ a {
     padding: 15px;
 }
 
-.banner-content h2 {
-    margin-bottom: 10px;
-}
-
-/* latest-products */
+/* Latest Products */
 .latest-products {
     margin-top: 70px;
     text-align: center;
@@ -98,7 +103,6 @@ a {
     margin-bottom: 20px;
     font-weight: 100;
     color: #212529;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .latest-products hr {
@@ -107,15 +111,15 @@ a {
     border: 1px solid #CDCECF;
 }
 
-.filter-buttons {
+section .filter-buttons {
     display: flex;
-    margin-top: 80px;
+    margin: 50px 0 0 0;
     flex-wrap: wrap;
     gap: 18px;
     justify-content: center;
 }
 
-.filter-btn {
+section .filter-buttons .filter-btn {
     padding: 10px 15px;
     border: 1px solid #474A4D;
     cursor: pointer;
@@ -123,13 +127,93 @@ a {
     border-radius: 7px;
 }
 
+section .filter-buttons .filter-btn:hover {
+    background-color: #212529;
+    color: #FFFFFF;
+}
+
+/* Product Grid */
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 15px 150px 20px;
     margin-top: 20px;
 }
 
+/* Individual Product Card */
 .product-card {
-    /* Style for individual product cards */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 450px;
+    border: 1px solid #D2D2D2;
+    border-radius: 8px;
+    background: #FFFFFF;
+    padding: 20px;
+    text-align: center;
+    /* transition: transform 0.3s, box-shadow 0.3s; */
+    cursor: pointer;
+}
+
+/* .product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+} */
+
+.product-card .product-info img {
+    margin-bottom: 15px;
+    object-fit: cover;
+    max-width: 100%;
+    height: 250px;
+}
+
+.product-card .product-info h3 {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #212426;
+}
+
+.product-card .product-info p {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #2F3A43;
+}
+
+.product-card .price-box .price {
+    font-weight: lighter;
+    font-size: 17px;
+    color: #231E21;
+    margin: 10px 0;
+}
+
+.product-card .button-box {
+    margin-top: 10px;
+}
+
+.product-card button {
+    background-color: #1C1D1F;
+    color: #FFFFFF;
+    border: none;
+    margin: 5px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.product-card button:hover {
+    background-color: #34383a;
+}
+
+/* End credits - my name */
+.myNameatBottom {
+    text-align: center; 
+    margin: 50px 0;
+}
+
+.myNameatBottom .underlined {
+    text-decoration: underline;
+    font-family: cursive;
+
 }
