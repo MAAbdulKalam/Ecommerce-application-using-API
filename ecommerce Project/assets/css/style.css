@@ -26,14 +26,8 @@ header h1 {
     color: #181819;
 }
 
-/* header nav a.active {
-    color: #181819;
-} */
-
 a {
     text-decoration: none;
-    color: #737273;
-    transition: color 0.3s ease;
 }
 
 header nav ul {
@@ -46,6 +40,18 @@ header nav ul {
 header nav ul li {
     margin: 0 20px 0 20px;
     font-size: 20px;
+}
+
+/* Default link styles */
+nav ul li a {
+    color: gray;
+    padding: 10px;
+    transition: color 0.3s ease;
+}
+
+/* Active link styles */
+nav ul li a.active {
+    color: #181819;
 }
 
 header .navbarButtons {

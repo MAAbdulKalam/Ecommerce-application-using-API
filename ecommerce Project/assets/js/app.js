@@ -1,3 +1,39 @@
+// Select all menu items
+const menuItems = document.querySelectorAll('nav ul li a');
+
+// Function to handle the active state on click
+menuItems.forEach(item => {
+    item.addEventListener('click', function (e) {
+        // Remove the active class from all links
+        menuItems.forEach(link => link.classList.remove('active'));
+
+        // Add the active class to the clicked link
+        this.classList.add('active');
+
+        // Save the active menu option in localStorage
+        localStorage.setItem('activeMenu', this.getAttribute('href'));
+    });
+});
+
+// Function to set the active menu based on localStorage or URL
+function setActiveMenu() {
+    // Get the current active menu from localStorage
+    const activeMenu = localStorage.getItem('activeMenu') || window.location.pathname;
+
+    // Loop through the menu items and match the href
+    menuItems.forEach(item => {
+        // Ensure the active class is applied to the link matching the URL
+        if (item.getAttribute('href').includes(activeMenu)) {
+            item.classList.add('active');
+        } else {
+            item.classList.remove('active');
+        }
+    });
+}
+
+// Set the active menu on page load
+setActiveMenu();
+
 let cartCount = 0;
 let cartTotal = 0;
 
