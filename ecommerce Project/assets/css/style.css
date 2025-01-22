@@ -26,9 +26,9 @@ header h1 {
     color: #181819;
 }
 
-header nav a.active {
+/* header nav a.active {
     color: #181819;
-}
+} */
 
 a {
     text-decoration: none;
@@ -94,14 +94,14 @@ section .banner-content {
 
 /* Latest Products */
 .latest-products {
-    margin-top: 70px;
     text-align: center;
+    margin: 100px 0px 50px 0;
 }
 
 .latest-products h2 {
     font-size: 50px;
     margin-bottom: 20px;
-    font-weight: 100;
+    font-weight: lighter;
     color: #212529;
 }
 
@@ -113,7 +113,7 @@ section .banner-content {
 
 section .filter-buttons {
     display: flex;
-    margin: 50px 0 0 0;
+    margin: 80px 0 40px 0;
     flex-wrap: wrap;
     gap: 18px;
     justify-content: center;
@@ -152,14 +152,14 @@ section .filter-buttons .filter-btn:hover {
     background: #FFFFFF;
     padding: 20px;
     text-align: center;
-    /* transition: transform 0.3s, box-shadow 0.3s; */
+    transition: transform 0.3s, box-shadow 0.3s;
     cursor: pointer;
 }
 
-/* .product-card:hover {
+.product-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-} */
+    box-shadow: 0 10px 5px rgba(0, 0, 0, 0.1);
+}
 
 .product-card .product-info img {
     margin-bottom: 15px;
@@ -208,7 +208,7 @@ section .filter-buttons .filter-btn:hover {
 
 /* End credits - my name */
 .myNameatBottom {
-    text-align: center; 
+    text-align: center;
     margin: 50px 0;
 }
 
