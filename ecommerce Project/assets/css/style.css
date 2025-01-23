@@ -101,19 +101,21 @@ section .banner-content {
 }
 
 /* Latest Products */
-.latest-products {
+.latest-products,
+.form-container {
     text-align: center;
     margin: 100px 0px 50px 0;
 }
 
-.latest-products h2 {
+.latest-products h2,
+.form-container h2 {
     font-size: 50px;
     margin-bottom: 20px;
     font-weight: lighter;
     color: #212529;
 }
 
-.latest-products hr {
+hr {
     width: 95%;
     margin: 0 auto;
     border: 1px solid #CDCECF;
@@ -279,4 +281,42 @@ section .filter-buttons .filter-btn:hover {
     margin-bottom: 10px;
     border-radius: 8px 8px 0 0;
 }
+
+
+/* contact Us page styles */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: flex;
+    margin: 29px 0 8px 39.5%;
+    color: #242225;
+}
+
+input,
+textarea {
+    width: 20%;
+    padding: 10px;
+    border: 1px solid #D4D9DE;
+    border-radius: 8px;
+    color: #66798E;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.contactSendBtn {
+    background-color: #6E7174;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto 0;
+}
+
+
 
