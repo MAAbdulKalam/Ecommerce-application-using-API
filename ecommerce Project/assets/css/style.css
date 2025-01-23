@@ -56,6 +56,12 @@ nav ul li a.active {
     color: black;
 }
 
+/* Style for active link */
+.active-link {
+    background-color: black;
+    color: white;
+}
+
 header .navbarButtons {
     display: flex;
     justify-content: flex-end;
@@ -102,13 +108,15 @@ section .banner-content {
 
 /* Latest Products */
 .latest-products,
-.form-container {
+.form-container,
+.cart-container {
     text-align: center;
     margin: 100px 0px 50px 0;
 }
 
 .latest-products h2,
-.form-container h2 {
+.form-container h2,
+.cart-container h2 {
     font-size: 50px;
     margin-bottom: 20px;
     font-weight: lighter;
@@ -227,6 +235,10 @@ section .filter-buttons .filter-btn:hover {
     font-family: cursive;
 }
 
+.myNameatBottom a{
+    color: black;
+}
+
 /* About Us page styles */
 
 .containerAboutUs {
@@ -284,6 +296,7 @@ section .filter-buttons .filter-btn:hover {
 
 
 /* contact Us page styles */
+
 .form-group {
     margin-bottom: 20px;
 }
@@ -319,4 +332,31 @@ textarea {
 }
 
 
+/* Cart page */
+.empty-cart-message-container {
+    background-color: #F3F4F5;
+    border: 1ps solid red;
+    margin: 1% 2.5% 1% 2.5%;
+    padding: 25px;
+}
+
+.empty-cart-message {
+    text-align: center;
+    color: #495358;
+    font-size: x-large;
+    font-weight: lighter;
+    font-stretch: ultra-expanded;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.continue-shopping-btn {
+    display: inline-block;
+    padding: 2px 20px;
+    background-color: #FAFAFA;
+    color: #323D42;
+    border: 1px solid #444347;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
 
