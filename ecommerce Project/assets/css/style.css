@@ -8,7 +8,7 @@ body {
 
 /* header */
 header {
-    padding: 30px 0;
+    padding: 15px 0;
     width: 100%;
     display: flex;
     justify-content: space-around;
@@ -38,8 +38,9 @@ header nav ul {
 }
 
 header nav ul li {
-    margin: 0 20px 0 20px;
-    font-size: 20px;
+    font-size: 20px; 
+    display: inline;
+    margin-right: 15px;
 }
 
 nav ul li a {
@@ -73,8 +74,8 @@ header .navbarButtons a {
     padding: 8px 18px;
     border: 1px solid #181819;
     border-radius: 10px;
-    margin-left: 25px;
     color: black;
+    margin-left: 10px;
 }
 
 header .navbarButtons a img {
@@ -153,9 +154,9 @@ section .filter-buttons .filter-btn:hover {
 /* Product Grid */
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr); /* Default: 3 products per row */
     gap: 30px;
-    padding: 15px 150px 20px;
+    padding: 15px;
     margin-top: 20px;
 }
 
@@ -358,4 +359,18 @@ textarea {
     text-decoration: none;
     border-radius: 5px;
     margin-top: 20px;
+}
+
+
+/* Responsive design adjustments for products on different screen sizes */
+@media screen and (max-width: 1024px) { /* Tablet */
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 products per row on tablet */
+    }
+}
+
+@media screen and (max-width: 600px) { /* Mobile */
+    .product-grid {
+        grid-template-columns: 1fr; /* 1 product per row on mobile */
+    }
 }
