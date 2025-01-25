@@ -11,13 +11,14 @@ header {
     padding: 15px 0;
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between; 
     align-items: center;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 1000;
     background-color: #f3f4f5;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
 }
 
 header h1 {
@@ -372,5 +373,76 @@ textarea {
 @media screen and (max-width: 600px) { /* Mobile */
     .product-grid {
         grid-template-columns: 1fr; /* 1 product per row on mobile */
+    }
+}
+
+/* Responsive design adjustments for header */
+@media screen and (max-width: 1024px) { /* Tablet */
+    header {
+        flex-direction: column; /* Stack the logo and navigation on top of each other */
+        padding: 20px 0;
+    }
+
+    header h1 {
+        font-size: 25px;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin-bottom: 10px; /* Adds spacing between nav items on tablet */
+        font-size: 18px;
+    }
+
+    header .navbarButtons {
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 10px;
+    }
+
+    header .navbarButtons a {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 600px) { /* Mobile */
+    header {
+        padding: 10px 0;
+    }
+
+    header h1 {
+        font-size: 22px; /* Smaller logo on mobile */
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin-bottom: 8px; /* Reduces space between nav items */
+        font-size: 16px;
+    }
+
+    header .navbarButtons {
+        width: 100%;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    header .navbarButtons a {
+        padding: 6px 12px;
+        font-size: 12px; /* Smaller buttons for mobile */
+    }
+
+    header .navbarButtons a img {
+        width: 18px; /* Smaller icons on mobile */
+        height: 18px;
     }
 }
