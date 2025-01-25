@@ -487,3 +487,43 @@ textarea {
         font-size: 18px; 
     }
 }
+
+
+/* Latest Products Section */
+@media screen and (max-width: 1024px) { /* Tablet */
+    .latest-products h2 {
+        font-size: 35px; 
+    }
+
+    .filter-buttons {
+        margin: 60px 0 30px 0;
+    }
+
+    .filter-buttons .filter-btn {
+        padding: 8px 12px; 
+        font-size: 14px; 
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 products per row on tablet */
+    }
+}
+
+@media screen and (max-width: 600px) { /* Mobile */
+    .latest-products h2 {
+        font-size: 28px; 
+    }
+
+    .filter-buttons {
+        margin: 40px 0 20px 0;
+    }
+
+    .filter-buttons .filter-btn {
+        padding: 6px 10px; 
+        font-size: 12px; 
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr; /* 1 product per row on mobile */
+    }
+}
