@@ -227,26 +227,6 @@ section .filter-buttons .filter-btn:hover {
     background-color: #34383a;
 }
 
-/* End credits - my name */
-.myNameatBottom {
-    text-align: center;
-    margin-top: 50px;
-    font-size: large;
-}
-
-.myNameatBottom .underlined {
-    text-decoration: underline;
-    font-family: cursive;
-}
-
-.underlined a {
-    text-decoration: underline;
-}
-
-.myNameatBottom a {
-    color: black;
-}
-
 /* About Us page styles */
 
 .containerAboutUs {
@@ -306,14 +286,18 @@ section .filter-buttons .filter-btn:hover {
 
 /* contact Us page styles */
 
-.form-group {
-    margin-bottom: 20px;
+.form-container h2 {
+    text-align: center;
+    font-size: 36px;
+    color: #242225;
+    margin-bottom: 10px;
 }
 
 label {
-    display: flex;
-    margin: 29px 0 8px 39.5%;
+    display: block;
+    font-size: 16px;
     color: #242225;
+    margin: 1% 17% 1px auto;
 }
 
 input,
@@ -323,6 +307,16 @@ textarea {
     border: 1px solid #D4D9DE;
     border-radius: 8px;
     color: #66798E;
+}
+
+.error {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.form-group {
+    margin-bottom: 20px;
 }
 
 textarea {
@@ -339,7 +333,6 @@ textarea {
     display: block;
     margin: 20px auto 0;
 }
-
 
 /* Cart page */
 .empty-cart-message-container {
@@ -367,6 +360,27 @@ textarea {
     text-decoration: none;
     border-radius: 5px;
     margin-top: 20px;
+}
+
+
+/* End credits - my name */
+.myNameatBottom {
+    text-align: center;
+    margin-top: 50px;
+    font-size: large;
+}
+
+.myNameatBottom .underlined {
+    text-decoration: underline;
+    font-family: cursive;
+}
+
+.underlined a {
+    text-decoration: underline;
+}
+
+.myNameatBottom a {
+    color: black;
 }
 
 
@@ -622,5 +636,64 @@ textarea {
 
     .about-us-product-image {
         height: 150px;
+    }
+}
+
+
+/* Responsive Design for Contact Us Page Styles */
+@media screen and (max-width: 1024px) {
+
+    /* Tablet */
+    .form-container {
+        max-width: 100%;
+        margin-top: 37%;
+    }
+
+    .form-container h2 {
+        font-size: 28px;
+    }
+
+    label {
+        font-size: 14px;
+        /* text-align: center; */
+    }
+
+    input,
+    textarea {
+        font-size: 14px;
+        padding: 10px 80px;
+    }
+
+    .contactSendBtn {
+        padding: 8px 16px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    /* Mobile */
+    .form-container {
+        max-width: 95%;
+        padding: 15px;
+        margin-top: 35%;
+    }
+
+    .form-container h2 {
+        font-size: 24px;
+    }
+
+    label {
+        font-size: 14px;
+    }
+
+    input,
+    textarea {
+        font-size: 12px;
+        padding: 10px 80px;
+    }
+
+    .contactSendBtn {
+        font-size: 14px;
+        padding: 8px;
     }
 }
