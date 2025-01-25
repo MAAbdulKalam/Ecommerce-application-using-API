@@ -11,14 +11,14 @@ header {
     padding: 15px 0;
     width: 100%;
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
     align-items: center;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 1000;
     background-color: #f3f4f5;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
@@ -39,7 +39,7 @@ header nav ul {
 }
 
 header nav ul li {
-    font-size: 20px; 
+    font-size: 20px;
     display: inline;
     margin-right: 15px;
 }
@@ -155,7 +155,8 @@ section .filter-buttons .filter-btn:hover {
 /* Product Grid */
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Default: 3 products per row */
+    grid-template-columns: repeat(3, 1fr);
+    /* Default: 3 products per row */
     gap: 30px;
     padding: 15px;
     margin-top: 20px;
@@ -229,7 +230,8 @@ section .filter-buttons .filter-btn:hover {
 /* End credits - my name */
 .myNameatBottom {
     text-align: center;
-    margin: 50px 0;
+    margin-top: 50px;
+    font-size: large;
 }
 
 .myNameatBottom .underlined {
@@ -237,7 +239,11 @@ section .filter-buttons .filter-btn:hover {
     font-family: cursive;
 }
 
-.myNameatBottom a{
+.underlined a {
+    text-decoration: underline;
+}
+
+.myNameatBottom a {
     color: black;
 }
 
@@ -277,6 +283,8 @@ section .filter-buttons .filter-btn:hover {
     display: flex;
     justify-content: space-between;
     margin-top: 40px;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 .about-us-product-card {
@@ -290,12 +298,11 @@ section .filter-buttons .filter-btn:hover {
 
 .about-us-product-image {
     width: 100%;
-    /* height: 150px; */
-    /* object-fit:cover; */
+    height: 250px;
+    object-fit: cover;
     margin-bottom: 10px;
     border-radius: 8px 8px 0 0;
 }
-
 
 /* contact Us page styles */
 
@@ -364,22 +371,31 @@ textarea {
 
 
 /* Responsive design adjustments for products on different screen sizes */
-@media screen and (max-width: 1024px) { /* Tablet */
+@media screen and (max-width: 1024px) {
+
+    /* Tablet */
     .product-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 products per row on tablet */
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 products per row on tablet */
     }
 }
 
-@media screen and (max-width: 600px) { /* Mobile */
+@media screen and (max-width: 600px) {
+
+    /* Mobile */
     .product-grid {
-        grid-template-columns: 1fr; /* 1 product per row on mobile */
+        grid-template-columns: 1fr;
+        /* 1 product per row on mobile */
     }
 }
 
 /* Responsive design adjustments for header */
-@media screen and (max-width: 1024px) { /* Tablet */
+@media screen and (max-width: 1024px) {
+
+    /* Tablet */
     header {
-        flex-direction: column; /* Stack the logo and navigation on top of each other */
+        flex-direction: column;
+        /* Stack the logo and navigation on top of each other */
         padding: 20px 0;
     }
 
@@ -394,7 +410,8 @@ textarea {
     }
 
     nav ul li {
-        margin-bottom: 10px; /* Adds spacing between nav items on tablet */
+        margin-bottom: 10px;
+        /* Adds spacing between nav items on tablet */
         font-size: 18px;
     }
 
@@ -410,13 +427,16 @@ textarea {
     }
 }
 
-@media screen and (max-width: 600px) { /* Mobile */
+@media screen and (max-width: 600px) {
+
+    /* Mobile */
     header {
         padding: 10px 0;
     }
 
     header h1 {
-        font-size: 22px; /* Smaller logo on mobile */
+        font-size: 22px;
+        /* Smaller logo on mobile */
     }
 
     nav ul {
@@ -426,7 +446,8 @@ textarea {
     }
 
     nav ul li {
-        margin-bottom: 8px; /* Reduces space between nav items */
+        margin-bottom: 8px;
+        /* Reduces space between nav items */
         font-size: 16px;
     }
 
@@ -438,61 +459,69 @@ textarea {
 
     header .navbarButtons a {
         padding: 6px 12px;
-        font-size: 12px; /* Smaller buttons for mobile */
+        font-size: 12px;
+        /* Smaller buttons for mobile */
     }
 
     header .navbarButtons a img {
-        width: 18px; /* Smaller icons on mobile */
+        width: 18px;
+        /* Smaller icons on mobile */
         height: 18px;
     }
 }
 
 /* Responsive design adjustments for the banner */
-@media screen and (max-width: 1024px) { /* Tablet */
+@media screen and (max-width: 1024px) {
+
+    /* Tablet */
     section .banner-image {
-        height: 430px; 
+        height: 430px;
     }
 
     section .banner-content {
-        font-size: large; 
-        top: 230px; 
-        padding: 10px; 
+        font-size: large;
+        top: 230px;
+        padding: 10px;
     }
 
     section .banner-content h2 {
-        font-size: 40px; 
+        font-size: 40px;
     }
 
     section .banner-content p {
-        font-size: 18px; 
+        font-size: 18px;
     }
 }
 
-@media screen and (max-width: 600px) { /* Mobile */
+@media screen and (max-width: 600px) {
+
+    /* Mobile */
     section .banner-image {
-        height: 430px; 
+        height: 430px;
     }
 
     section .banner-content {
-        font-size: medium; 
-        top: 250px; 
-        padding: 4px; 
+        font-size: medium;
+        top: 250px;
+        padding: 4px;
     }
 
     section .banner-content h2 {
-        font-size: 28px; 
+        font-size: 28px;
     }
 
     section .banner-content p {
-        font-size: 18px; 
+        font-size: 18px;
     }
 }
-
 
 /* Latest Products Section */
-@media screen and (max-width: 1024px) { /* Tablet */
+@media screen and (max-width: 1024px) {
+
+    /* Tablet */
     .latest-products h2 {
-        font-size: 35px; 
+        font-size: 35px;
+        margin-top: 250px;
     }
 
     .filter-buttons {
@@ -500,18 +529,23 @@ textarea {
     }
 
     .filter-buttons .filter-btn {
-        padding: 8px 12px; 
-        font-size: 14px; 
+        padding: 8px 12px;
+        font-size: 14px;
     }
 
     .product-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 products per row on tablet */
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 products per row on tablet */
     }
 }
 
-@media screen and (max-width: 600px) { /* Mobile */
+@media screen and (max-width: 600px) {
+
+    /* Mobile */
     .latest-products h2 {
-        font-size: 28px; 
+        font-size: 28px;
+        font-size: 35px;
+        margin-top: 230px;
     }
 
     .filter-buttons {
@@ -519,11 +553,74 @@ textarea {
     }
 
     .filter-buttons .filter-btn {
-        padding: 6px 10px; 
-        font-size: 12px; 
+        padding: 6px 10px;
+        font-size: 12px;
     }
 
     .product-grid {
-        grid-template-columns: 1fr; /* 1 product per row on mobile */
+        grid-template-columns: 1fr;
+        /* 1 product per row on mobile */
+    }
+}
+
+
+/* About Us page rwd styles */
+@media screen and (max-width: 1024px) {
+
+    /* Tablet*/
+    .about-us-title {
+        margin-top: 150px;
+    }
+
+    .about-us-products-title {
+        font-size: 30px;
+    }
+
+    .about-us-para {
+        font-size: large;
+    }
+
+    .about-us-products {
+        justify-content: space-evenly;
+    }
+
+    .about-us-product-card {
+        width: 45%;
+    }
+
+    .about-us-product-image {
+        height: 200px;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+
+    /* Mobile */
+    .containerAboutUs {
+        max-width: 95%;
+    }
+
+    .about-us-title,
+    .about-us-products-title {
+        font-size: 25px;
+    }
+
+    .about-us-para {
+        font-size: medium;
+    }
+
+    .about-us-products {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-us-product-card {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .about-us-product-image {
+        height: 150px;
     }
 }
