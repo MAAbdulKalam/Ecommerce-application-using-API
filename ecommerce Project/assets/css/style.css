@@ -446,3 +446,44 @@ textarea {
         height: 18px;
     }
 }
+
+/* Responsive design adjustments for the banner */
+@media screen and (max-width: 1024px) { /* Tablet */
+    section .banner-image {
+        height: 430px; 
+    }
+
+    section .banner-content {
+        font-size: large; 
+        top: 230px; 
+        padding: 10px; 
+    }
+
+    section .banner-content h2 {
+        font-size: 40px; 
+    }
+
+    section .banner-content p {
+        font-size: 18px; 
+    }
+}
+
+@media screen and (max-width: 600px) { /* Mobile */
+    section .banner-image {
+        height: 430px; 
+    }
+
+    section .banner-content {
+        font-size: medium; 
+        top: 250px; 
+        padding: 4px; 
+    }
+
+    section .banner-content h2 {
+        font-size: 28px; 
+    }
+
+    section .banner-content p {
+        font-size: 18px; 
+    }
+}
