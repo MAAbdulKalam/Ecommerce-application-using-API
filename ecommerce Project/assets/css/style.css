@@ -11,7 +11,7 @@ header {
     padding: 15px 0;
     width: 100%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
     position: fixed;
     top: 0;
@@ -340,13 +340,9 @@ textarea {
     font-size: large;
 }
 
-.myNameatBottom .underlined {
+.myNameatBottom .underlined a {
     text-decoration: underline;
     font-family: cursive;
-}
-
-.underlined a {
-    text-decoration: underline;
 }
 
 .myNameatBottom a {
@@ -682,7 +678,6 @@ textarea {
 
 .empty-cart p {
     font-size: 50px;
-    /* margin-bottom: 20px; */
     color: #242D3A;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -708,7 +703,7 @@ textarea {
     border: 2px solid #CDCECF;
     padding: 15px;
     color: #212529;
-    font-size: x-large;
+    font-size: larger;
     font-weight: bolder;
     text-align: left;
     border-radius: 8px;
@@ -772,7 +767,6 @@ textarea {
     border: 2px solid #E1E1E1;
     border-radius: 8px;
     text-align: left;
-    /* margin-top: 0px; */
     display: grid;
     position: absolute;
     top: 200px;
@@ -806,4 +800,81 @@ textarea {
     font-size: larger;
     font-weight: bolder;
     text-align: left;
+}
+
+/* cart RWD*/
+@media (max-width: 1024px) {
+
+    /* Tablet Responsive */
+    .cart-container {
+        flex-direction: column;
+        margin-top: 30%;
+    }
+
+    .productContainer {
+        width: 98%;
+    }
+
+    .cart-item img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .cart-item h3 {
+        font-size: 16px;
+    }
+
+    .cart-item .price,
+    .cart-item p {
+        font-size: 14px;
+    }
+
+    .order-summary {
+        width: 30%;
+        margin-left: 10%;
+        position: relative;
+        top: 5%;
+        left: 23%;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    /*Mobile*/
+    .cart-container {
+        margin-top: 41%;
+    }
+
+    .productContainer {
+        width: 96%;
+    }
+
+    .cart-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .cart-item img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .cart-item h3 {
+        font-size: 14px;
+    }
+
+    .cart-item .price,
+    .cart-item p {
+        font-size: 13px;
+    }
+
+    .order-summary {
+        width: 30%;
+        margin-left: 10%;
+        position: relative;
+        top: 5%;
+        left: 23%;
+    }
 }
